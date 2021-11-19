@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> candy clicker </title>
+    </head>
+<center>
+    <body>
+        <p>Candy Clicker</p>
+        
+        <p> score: <span id="score">0</span></p>
+
+        <img src="picture/New Piskel (5).png" onclick="AddToScore(1)">
+
+        <button onclick="buycursor()">Cursurs: <span id="cursurcost">15</span><span id="cursurs">0</span></body></button>
+
+    
+        <script>
+            var score = 0;
+            
+            var cursurcost = 15;
+            var Cursurs = 0;
+
+            function buycursor (amount) {
+                if (score >= cursurcost) {
+                    score = score - cursurcost;
+                    
+
+
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("cursurcost").innerHTML = cursurcost;
+                    document.getElementById("cursurs").innerHTML = cursurs;
+
+                }
+            }
+
+            function AddToScore(amount){
+                score=score + amount;
+                document.getElementById("score").innerHTML = score;
+            }
+        </script>
+
+    </body>
+</center>
+</html>
